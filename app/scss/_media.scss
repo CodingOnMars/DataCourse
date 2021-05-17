@@ -1,0 +1,28 @@
+@media (max-width: 767px) {
+
+    .header__menu-list {
+        display: none;
+    }
+
+    .header__menu-list--active {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        &:first-child {
+            margin-top: 50px;
+        }
+    }
+
+    .header__logo--hide {
+        display: none;
+    }
+
+    .header__menu-link {
+        display: block;
+        padding: 25px 0;
+        font-weight: 500;
+        font-size: 25px;
+    }
+}

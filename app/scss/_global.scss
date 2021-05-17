@@ -1,0 +1,20 @@
+body {
+    @extend %regular;
+    font-size: 16px;
+    line-height: 26 / 16 * 100%;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+
+    @media (max-width: 1220px) {
+        padding: 0 20px;
+    }
+}
+
+.page-subtitle {
+    @extend %bold;
+    font-size: 34px;
+    line-height: 50 / 34 * 100%;
+}

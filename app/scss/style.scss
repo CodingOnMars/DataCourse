@@ -3,7 +3,132 @@
 @import 'fonts';
 @import 'global';
 
+// start header
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 33px;
+        padding-bottom: 33px;
+    }
 
+    &__menu {
+        padding-left: 494px;
+
+        @media (max-width:1220px) {
+            padding-left: 350px;
+        }
+
+        @media (max-width:1106px) {
+            padding-left: 250px;
+        }
+
+        @media (max-width:1006px) {
+            padding-left: 150px;
+        }
+
+        @media (max-width:906px) {
+            padding-left: 50px;
+        }
+
+    }
+
+    &__menu-list {
+        display: flex;
+    }
+
+    &__menu-item {
+        &:not(:last-child) {
+            margin-right: 33px;
+
+            @media (max-width:906px) {
+                margin-right: 17px;
+            }
+        }
+    }
+
+    &__menu-link {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 16 / 15 * 100%;
+        color: $dark;
+        transition: color .3s ease-out;
+
+        @media (min-width: 900px) {
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    // start hamburger menu icon
+    .menu-icon {
+        cursor: pointer;
+        float: right;
+        position: relative;
+        user-select: none;
+        margin-top: 15px;
+
+        @media (min-width: 767px) {
+            display: none;
+        }
+    }
+
+    .nav-icon {
+        background: #333;
+        display: block;
+        height: 3px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 30px;
+
+        &::before,
+        &::after {
+            background: $black;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+
+        &::before {
+            top: 5px;
+        }
+
+        &::after {
+            top: -5px;
+        }
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .menu-btn:checked~.menu {
+        max-height: 240px;
+    }
+
+    .menu-btn:checked~.menu-icon .nav-icon {
+        background: transparent;
+    }
+
+    .menu-btn:checked~.menu-icon .nav-icon:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .menu-btn:checked~.menu-icon .nav-icon:after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    // end hamburger menu icon
+
+}
+
+// end header
 
 
 
