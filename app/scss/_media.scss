@@ -1,5 +1,9 @@
 @media (max-width: 767px) {
 
+    .header__menu {
+        margin: 0 auto;
+    }
+
     .header__menu-list {
         display: none;
     }
@@ -24,5 +28,10 @@
         padding: 25px 0;
         font-weight: 500;
         font-size: 25px;
+    }
+
+    .top__title,
+    .top__timeline {
+        font-size: 40px;
     }
 }
