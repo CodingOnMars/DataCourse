@@ -616,8 +616,6 @@
     &__item-title {
         padding-bottom: 20px;
     }
-
-
 }
 
 // end knowhow article
@@ -643,7 +641,6 @@
     &__img {
         width: 100%;
         max-width: 420px;
-        // max-width: 300px;
     }
 
     &__items {
@@ -670,9 +667,199 @@
 
 // end certificate article
 
-// end ed system
+// end edsystem
+
+// start advantages section
+.advantages {
+    padding-top: 126px;
+    padding-bottom: 116px;
+
+    @media (max-width: 767px) {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 44px;
+        line-height: 59 / 44 * 100%;
+        text-align: center;
+        padding-bottom: 57px;
+
+        &_grey {
+            color: $grey;
+        }
+
+        &_red {
+            color: $red;
+        }
+
+        &_orange {
+            color: $deep-orange;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 103px;
+
+        @media (max-width: 870px) {
+            grid-template-columns: repeat(1, 1fr);
+            padding-bottom: 20px;
+        }
+    }
+
+    &__item-inner {
+        display: grid;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 57px;
+
+        @media (max-width: 870px) {
+            margin-bottom: 35px;
+        }
+        
+    }
+
+    &__item-img {
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+
+        @media (max-width: 870px) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__item-img_size {
+        width: 60px;
+        height: 60px;
+
+        @media (max-width: 870px) {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    &__item-text {
+        padding-left: 16px;
+    }
+
+    &__item-text_bold {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30 / 20 * 100%;
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+
+    &__price {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 870px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__price-item_grey {
+        padding-top: 80px;
+        color: $grey;
+
+        @media (max-width: 870px) {
+            padding-top: 0;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__price-item_orange {
+        margin-left: 126px;
+        color: $deep-orange;
+
+        @media (max-width: 870px) {
+            margin-left: 0;
+        }
+    }
+
+    &__price-title {
+        text-transform: uppercase;
+    }
+
+    &__price-title_regular_grey {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22 / 18 * 100%;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+
+    &__price-value_regular_grey {
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 72 / 60 * 100%;
+
+        @media (max-width: 870px) {
+            font-size: 35px;
+        }
+    }
+
+    &__price-currency_regular_grey {
+        font-size: 36px;
+        line-height: 45 / 36 * 100%;
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+        }
+    }
+
+    &__price-title_bold_orange {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 50 / 34 * 100%;
+
+        @media (max-width: 767px) {
+            font-size: 25px;
+        }
+    }
+
+    &__price-value_bold_orange {
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 140 / 96 * 100%;
+
+        @media (max-width: 767px) {
+            font-size: 60px;
+        }
+    }
+
+    &__price-currency_bold_orange {
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 88 / 60 * 100%;
+
+        @media (max-width: 767px) {
+            font-size: 30px;
+        }
+    }
 
 
+
+}
+
+// end advantages section
 
 
 
