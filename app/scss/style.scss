@@ -1053,7 +1053,127 @@
 
 // end timeline section
 
+// start course section 
+.course {
+    padding-top: 20px;
+    padding-bottom: 140px;
 
+    @media (max-width: 767px) {
+        padding-bottom: 40px;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 64 / 48 * 100%;
+        padding-bottom: 14px;
+    }
+
+    &__desc {
+        font-size: 20px;
+        line-height: 30 / 20 * 100%;
+        padding-bottom: 75px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        gap: 20px;
+        max-width: 930px;
+
+        @media (max-width: 887px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0;
+        }
+    }
+
+    &__item {
+        position: relative;
+        max-width: 453px;
+        min-height: 348px;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 453px 348px;
+        filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.1));
+
+        @media (max-width: 480px) {
+            background-size: 378px 320px;
+            min-height: 320px;
+        }
+
+        @media (max-width: 414px) {
+            background-size: 340px 260px;
+            min-height: 260px;
+        }
+
+        @media (max-width: 374px) {
+            background-size: 288px 260px;
+        }
+    }
+
+    &__item-title,
+    &__item-text {
+        position: absolute;
+    }
+
+    &__item-title {
+        top: 194px;
+        left: 80px;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40 /30 * 100%; 
+
+        @media (max-width: 480px) {
+            font-size: 25px;
+        }
+
+        @media (max-width: 414px) {
+            top: 145px;
+            left: 60px;
+            font-size: 22px;
+        }
+
+        @media (max-width: 374px) {
+            font-size: 18px;
+        }
+    }
+
+    &__item-title_white,
+    &__item-text {
+        color: $white;
+        left: 50px;
+    }
+
+    &__item-title_white {
+        font-weight: 700;
+        font-size: 34px;
+        top: 31px;
+
+        @media (max-width: 480px) {
+            font-size: 28px;
+            top: 20px;
+        }
+    }
+
+    &__item-text {
+        max-width: 252px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35 / 24 * 100%;
+        top: 120px;
+
+        @media (max-width: 480px) {
+            font-size: 20px;
+            top: 80px;
+        }
+
+        @media (max-width: 414px) {
+            font-size: 18px;
+        }
+    }
+}
+
+// end course section 
 
 
 @import 'media';
