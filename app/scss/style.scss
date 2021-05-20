@@ -725,7 +725,7 @@
         @media (max-width: 870px) {
             margin-bottom: 35px;
         }
-        
+
     }
 
     &__item-img {
@@ -854,13 +854,204 @@
             font-size: 30px;
         }
     }
-
-
-
 }
 
 // end advantages section
 
+// start timeline section
+.timeline {
+    padding-top: 15px;
+    padding-bottom: 114px;
+
+    @media (max-width: 767px) {
+        padding-bottom: 40px;
+    }
+
+    &__box {
+        padding: 51px 78px 90px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.1));
+
+        @media (max-width: 767px) {
+            padding: 51px 10px 90px 10px;
+            background-position: center;
+        }
+    }
+
+    &__title,
+    &__subtitle {
+        color: $white;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 54px;
+        line-height: 72 / 54 * 100%;
+        padding-bottom: 30px;
+
+        @media (max-width: 1108px) {
+            font-size: 50px;
+        }
+
+        @media (max-width: 1089px) {
+            font-size: 40px;
+        }
+    }
+
+    &__subtitle {
+        padding-bottom: 38px;
+
+        @media (max-width: 1089px) {
+            font-size: 28px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 1108px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__form-name,
+    &__form-phone {
+        height: 43px;
+        padding: 13px;
+        background: $white;
+        border: 1px solid $dim-orange;
+        outline: 0;
+        box-shadow: 0px 3px 10px rgba(254, 132, 14, 0.2);
+        border-radius: 20px;
+
+        &:focus {
+            border-color: $black;
+        }
+
+        &::placeholder {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17 / 14 * 100%;
+            text-transform: uppercase;
+            color: $light-orange;
+        }
+
+        @media (max-width: 1108px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__form-name {
+        width: 50%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__form-phone {
+        width: 30%;
+
+        @media (max-width: 1108px) {
+            width: 50%;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 90px;
+
+        @media (max-width: 1079px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (max-width: 550px) {
+            padding-top: 10px;
+        }
+    }
+
+    &__item {
+        @media (max-width: 550px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__item-inner {
+        display: flex;
+
+        @media (max-width: 415px) {
+            flex-direction: column;
+        }
+    }
+
+    &__item-img {
+        width: 100%;
+        max-width: 210px;
+
+        @media (max-width: 550px) {
+            width: 50%;
+        }
+    }
+
+    &__item-discount {
+        max-width: 300px;
+        margin-left: 10px;
+        margin-bottom: 35px;
+
+        @media (max-width: 1079px) {
+            margin-left: 0px;
+        }
+    }
+
+    &__item-value {
+        font-weight: 900;
+        font-size: 120px;
+        line-height: 176 / 120 * 100%;
+
+        @media (max-width: 550px) {
+            font-size: 80px;
+        }
+    }
+
+    &__item-value_orange {
+        background: linear-gradient(180deg, #F5FA72 32.47%, #FE840E 150.65%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    &__item-value_red {
+        background: linear-gradient(180deg, #FE840E 22.46%, #C81F56 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    &__item-text {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32 / 24 * 100%;
+
+        @media (max-width: 550px) {
+            font-size: 20px;
+        }
+    }
+}
+
+// end timeline section
 
 
 
