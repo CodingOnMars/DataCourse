@@ -1121,7 +1121,7 @@
         left: 80px;
         font-weight: 600;
         font-size: 30px;
-        line-height: 40 /30 * 100%; 
+        line-height: 40 /30 * 100%;
 
         @media (max-width: 480px) {
             font-size: 25px;
@@ -1174,6 +1174,168 @@
 }
 
 // end course section 
+
+// start about section 
+.about {
+    padding-top: 67px;
+    padding-bottom: 115px;
+
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    &__title,
+    &__subtitle,
+    &__desc,
+    &__teachers-title {
+        color: $white;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 88 / 60 * 100%;
+        padding-bottom: 59px;
+
+        @media (max-width: 767px) {
+            font-size: 40px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__subtitle {
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 41 / 34 * 100%;
+        padding-bottom: 16px;
+        max-width: 676px;
+
+        @media (max-width: 767px) {
+            font-size: 30px;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__desc {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 35 / 24 * 100%;
+        padding-bottom: 90px;
+        max-width: 700px;
+
+        @media (max-width: 767px) {
+            font-size: 20px;
+            padding-bottom: 40px;
+        }
+    }
+
+    &__teachers-title {
+        padding-bottom: 55px;
+
+        @media (max-width: 767px) {
+            font-size: 30px;
+            padding-bottom: 25px;
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        max-width: 930px;
+
+        @media (max-width: 850px) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 50px;
+        }
+    }
+
+    &__box {
+        max-width: 453px;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+
+    &__box-profile {
+        position: relative;
+        min-height: 287px;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        border-radius: 20px;
+    }
+
+    &__box-name,
+    &__box-surname {
+        position: absolute;
+        color: $white;
+    }
+
+    &__box-name {
+        top: 60%;
+        left: 7%;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 35 / 30 * 100%;
+    }
+
+    &__box-surname {
+        top: 80%;
+        left: 7%;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30 / 25 * 100%;
+    }
+
+    &__box-list {
+        max-width: 363px;
+        margin: 36px auto;
+    }
+
+    &__box-item {
+        position: relative;
+        padding-bottom: 25px;
+        padding-left: 12px;
+
+        @media (max-width: 450px) {
+            padding-left: 20px;
+        }
+
+        &::before {
+            content: "•";
+            position: absolute;
+            top: 0;
+            left: -12px;
+            font-size: 20px;
+            line-height: 28 / 20 * 100%;
+
+            @media (max-width: 867px) {
+                left: -5px;
+            }
+
+            @media (max-width: 423px) {
+                left: 5px;
+            }
+        }
+    }
+
+    &__box-text {
+        font-size: 20px;
+        line-height: 28 / 20 * 100%;
+
+        @media (max-width: 867px) {
+            font-size: 16px;
+        }
+    }
+}
+
+// end about section 
 
 
 @import 'media';
