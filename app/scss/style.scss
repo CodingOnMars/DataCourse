@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'reset';
 @import 'fonts';
+@import 'libs';
 @import 'global';
 
 // start header
@@ -1336,6 +1337,111 @@
 }
 
 // end about section 
+
+// start reviews section
+.reviews {
+    padding-top: 116px;
+    padding-bottom: 132px;
+
+    @media (max-width: 767px) {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 68px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__items {
+        padding-top: 30px;
+        filter: drop-shadow(0px 15px 50px rgba(254, 132, 14, 0.1));
+    }
+
+    &__box {
+        position: relative;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 700px;
+        height: auto;
+
+        margin-top: 36px;
+        padding: 36px 45px;
+        background: $white;
+        border: 1px solid $orange;
+        border-radius: 20px;
+    }
+
+    &__box-img {
+        position: absolute;
+        top: -30px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    &__box-text {
+        padding-top: 28px;
+        padding-bottom: 21px;
+
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 20 / 14 * 100%;
+        }
+    }
+
+    &__box-name {
+
+        @media (max-width: 767px) {
+            font-size: 12px;
+            line-height: 16 / 12 * 100%;
+        }
+    }
+}
+
+// start reviews slider
+.slick-slide {
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+.slick-dots {
+    list-style: none;
+    text-align: center;
+}
+
+.reviews__items .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots button {
+    margin: 86px 12px;
+    line-height: 12;
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background-color: $grey;
+    border: none;
+    border-radius: 50%;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.slick-active button {
+    background-color: $deep-orange;
+}
+
+// end reviews slider
+
+// end reviews section
 
 
 @import 'media';
