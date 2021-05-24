@@ -1066,6 +1066,18 @@
             grid-template-columns: repeat(1, 1fr);
             gap: 0;
         }
+
+        @media (min-width: 900px) {
+            position: relative;
+            
+            &::before {
+                content: url("../images/course-bg.svg");
+                position: absolute;
+                top: -210px;
+                left: -190px;
+                z-index: -1;
+            }
+        }
     }
 
     &__item {
@@ -1764,12 +1776,25 @@
     }
 
     &__copyright {
-        margin-top: -36px;
+        margin-top: -52px;
     }
 
     &__copyright-text {
         @media (max-width: 767px) {
             margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .mars-link {
+        color: #f22323;
+        opacity: 0.8;
+        transition: opacity .5s;
+    
+        @media (min-width: 860px) {
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }
