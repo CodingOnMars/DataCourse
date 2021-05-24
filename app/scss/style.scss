@@ -1184,7 +1184,7 @@
     background-repeat: no-repeat;
     background-position: top center;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         padding-top: 40px;
         padding-bottom: 50px;
     }
@@ -1343,7 +1343,7 @@
     padding-top: 116px;
     padding-bottom: 132px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         padding-top: 40px;
         padding-bottom: 50px;
     }
@@ -1442,6 +1442,99 @@
 // end reviews slider
 
 // end reviews section
+
+// start contacts section
+.contacts {
+    padding-bottom: 111px;
+
+    @media (max-width: 767px) {
+        padding-bottom: 50px;
+    }
+
+    &__inner {
+        display: flex;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        max-width: 572px;
+        padding-top: 56px;
+        filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.1));
+        border-radius: 20px;
+
+        @media (max-width: 767px) {
+            order: 2;
+        }
+    }
+
+    &__box {
+        position: relative;
+        margin-left: 41px;
+        padding-top: 90px;
+        color: $white;
+
+        &::after {
+            content: url("../images/contacts-bg.svg");
+            position: absolute;
+            top: 0px;
+            left: -400px;
+            z-index: -1;
+
+            @media (max-width: 767px) {
+                left: -320px;
+            }
+        }
+    }
+
+    &__box-title {
+        margin-bottom: 52px;
+    }
+
+    &__box-item {
+        padding-left: 26px;
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            margin-bottom: 31px;
+        }
+    }
+
+    &__box-item_phone,
+    &__box-item_email,
+    &__box-item_pin {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            top: 0px;
+            left: 2px;
+        }
+    }
+
+    &__box-item_phone {
+        &::before {
+            content: url("../images/contacts-phone.svg")
+        }
+    }
+
+    &__box-item_email {
+        &::before {
+            content: url("../images/contacts-email.svg")
+        }
+    }
+
+    &__box-item_pin {
+        &::before {
+            content: url("../images/contacts-pin.svg")
+        }
+    }
+}
+
+// end contacts section
 
 
 @import 'media';
