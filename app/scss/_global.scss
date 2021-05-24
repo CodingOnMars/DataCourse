@@ -13,7 +13,7 @@ body {
     max-width: 1240px;
     margin: 0 auto;
 
-    @media (max-width: 1220px) {
+    @media (max-width: 1240px) {
         padding: 0 20px;
     }
 }
@@ -52,5 +52,27 @@ body {
         &:hover {
             background: $dark-orange;
         }
+    }
+}
+
+.form-input {
+    height: 43px;
+    padding: 13px;
+    background: $white;
+    border: 1px solid $dim-orange;
+    outline: 0;
+    box-shadow: 0px 3px 10px rgba(254, 132, 14, 0.2);
+    border-radius: 20px;
+
+    &:focus {
+        border-color: $black;
+    }
+
+    &::placeholder {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17 / 14 * 100%;
+        text-transform: uppercase;
+        color: $light-orange;
     }
 }

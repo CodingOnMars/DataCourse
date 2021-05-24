@@ -920,26 +920,6 @@
 
     &__form-name,
     &__form-phone {
-        height: 43px;
-        padding: 13px;
-        background: $white;
-        border: 1px solid $dim-orange;
-        outline: 0;
-        box-shadow: 0px 3px 10px rgba(254, 132, 14, 0.2);
-        border-radius: 20px;
-
-        &:focus {
-            border-color: $black;
-        }
-
-        &::placeholder {
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 17 / 14 * 100%;
-            text-transform: uppercase;
-            color: $light-orange;
-        }
-
         @media (max-width: 1108px) {
             margin-bottom: 30px;
         }
@@ -1186,7 +1166,7 @@
 
     @media (max-width: 768px) {
         padding-top: 40px;
-        padding-bottom: 50px;
+        padding-bottom: 80px;
     }
 
     &__title,
@@ -1338,14 +1318,147 @@
 
 // end about section 
 
+// start contact-form section
+.contact-form {
+    &__box {
+        padding: 32px 78px 51px;
+        background-repeat: no-repeat;
+        filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.1));
+
+
+        @media (max-width: 1240px) {
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 20px 8px;
+        }
+    }
+
+    &__title {
+        padding-bottom: 38px;
+        color: $white;
+    }
+
+    &__items {
+        display: flex;
+
+        @media (max-width: 1240px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__form {
+        display: flex;
+        width: 100%;
+        max-width: 920px;
+
+        @media (max-width: 990px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__form-name,
+    &__form-phone,
+    &__form-btn {
+        margin-right: 20px;
+
+        @media (max-width: 990px) {
+            margin-top: 20px;
+            margin-right: 0;
+        }
+    }
+
+    &__form-name {
+        width: 100%;
+
+        @media (maX-width: 990px) {
+            width: 50%;
+        }
+
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+
+        @media (min-width: 991px) {
+            max-width: 335px;
+        }
+    }
+
+    &__form-phone {
+        width: 100%;
+
+        @media (max-width: 990px) {
+            width: 50%;
+        }
+
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+
+        @media (min-width: 991px) {
+            max-width: 260px;
+        }
+    }
+
+    &__form-btn {
+        width: 100%;
+        width: 184px;
+        background: $deep-orange;
+
+        @media (max-width: 990px) {
+            border: 2px solid $white;
+        }
+    }
+
+    &__social {
+        display: flex;
+        margin-right: 80px;
+
+        @media (max-width: 1240px) {
+            margin-top: 50px;
+            margin-right: 0px;
+        }
+    }
+
+    &__social-item {
+        &:not(last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__social-img {
+        width: 43px;
+        height: 43px;
+        transition: all .3s ease-in;
+
+        @media (max-width: 1240px) {
+            border: 3px solid $white;
+            border-radius: 50%;
+        }
+
+        @media (min-width: 900px) {
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+}
+
+// end contact-form section
+
 // start reviews section
 .reviews {
     padding-top: 116px;
     padding-bottom: 132px;
 
     @media (max-width: 768px) {
-        padding-top: 40px;
-        padding-bottom: 50px;
+        padding-top: 70px;
+        padding-bottom: 80px;
     }
 
     &__title {
