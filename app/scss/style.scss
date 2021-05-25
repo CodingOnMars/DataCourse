@@ -419,10 +419,14 @@
 
 .edsystem {
     &__container {
-        margin: 0 auto;
         background-repeat: no-repeat;
         background-size: 1920px;
         background-position: center;
+
+        @media (min-width: 1241px) {
+            background-size: 1920px 100%;
+            background-position: top -110px center;
+        }
     }
 }
 
@@ -439,10 +443,6 @@
 
     &__title {
         max-width: 806px;
-
-        @media (max-width: 600px) {
-            font-size: 25px;
-        }
     }
 
     &__desc {
@@ -516,6 +516,10 @@
 .databox {
     padding-top: 114px;
 
+    @media (max-width: 1240px) {
+        padding-top: 50px;
+    }
+
     &__title {
         max-width: 886px;
         color: $white;
@@ -530,6 +534,7 @@
 
         @media (max-width: 1219px) {
             background-size: 0 0;
+            padding-top: 50px;
         }
     }
 
@@ -538,7 +543,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
 
-        @media (min-width: 1219px) {
+        @media (min-width: 1220px) {
             flex-direction: column;
             margin-left: 60%;
         }
@@ -576,6 +581,10 @@
         padding-top: 100px;
         padding-bottom: 50px;
         max-width: 886px;
+
+        @media (max-width: 1219px) {
+            padding-top: 50px;
+        }
     }
 
     &__title,
@@ -898,6 +907,10 @@
         @media (max-width: 1089px) {
             font-size: 40px;
         }
+
+        @media (max-width: 450px) {
+            font-size: 34px;
+        }
     }
 
     &__subtitle {
@@ -905,6 +918,10 @@
 
         @media (max-width: 1089px) {
             font-size: 28px;
+        }
+
+        @media (max-width: 450px) {
+            font-size: 22px;
         }
     }
 
@@ -1054,6 +1071,11 @@
         font-size: 20px;
         line-height: 30 / 20 * 100%;
         padding-bottom: 75px;
+
+        @media (max-width: 450px) {
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
     }
 
     &__items {
@@ -1069,7 +1091,7 @@
 
         @media (min-width: 900px) {
             position: relative;
-            
+
             &::before {
                 content: url("../images/course-bg.svg");
                 position: absolute;
@@ -1423,7 +1445,7 @@
         background: $deep-orange;
 
         @media (max-width: 990px) {
-            border: 2px solid $white;
+            background: $dim-orange;
         }
     }
 
@@ -1446,14 +1468,10 @@
     &__social-img {
         width: 43px;
         height: 43px;
-        transition: all .3s ease-in;
-
-        @media (max-width: 1240px) {
-            border: 3px solid $white;
-            border-radius: 50%;
-        }
 
         @media (min-width: 900px) {
+            transition: all .3s ease-in;
+
             &:hover {
                 transform: scale(1.5);
             }
@@ -1724,6 +1742,14 @@
     &__menu-btn {
         width: 217px;
         color: $white;
+
+        @media (min-width: 900px) {
+            transition: all .3s ease-in-out;
+    
+            &:hover {
+                background: $dark-orange;
+            }
+        }
     }
 
     &__menu-list {
@@ -1790,7 +1816,7 @@
         color: #f22323;
         opacity: 0.8;
         transition: opacity .5s;
-    
+
         @media (min-width: 860px) {
             &:hover {
                 opacity: 1;
