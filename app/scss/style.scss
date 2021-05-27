@@ -358,49 +358,38 @@
     }
 
     &__items {
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(6, minmax(150px, 216px));
-        justify-content: center;
-        column-gap: 23px;
         margin-top: 20px;
-
-        @media (max-width: 1430px) {
-            grid-template-columns: repeat(4, minmax(150px, 216px));
-            row-gap: 30px;
-        }
-
-        @media (max-width: 950px) {
-            grid-template-columns: repeat(3, minmax(150px, 216px));
-        }
-
-        @media (max-width: 712px) {
-            grid-template-columns: repeat(2, minmax(150px, 216px));
-        }
-
-        @media (max-width: 712px) {
-            grid-template-columns: repeat(2, minmax(150px, 216px));
-        }
-
-        @media (max-width: 374px) {
-            grid-template-columns: repeat(1, minmax(150px, 216px));
-        }
     }
 
     &__item {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: flex-start;
+        max-width: 216px;
+        min-height: 287px;
+        margin-bottom: 20px;
         padding: 20px;
         background: $white;
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
         border-radius: 20px;
     }
 
+    &__item-logo {
+        width: 40px;
+        height: 40px;
+    }
+
     &__item-position {
         padding-top: 32px;
         padding-bottom: 23px;
+    }
+
+    &__item-salary {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17 / 14 * 100%;
+        color: $red;
     }
 
     &__item-employer {
@@ -410,6 +399,10 @@
     &__container-btn {
         padding-top: 60px;
         padding-bottom: 94px;
+    }
+
+    .slick-dots button {
+        margin: 34px 12px;
     }
 }
 
@@ -1546,43 +1539,11 @@
             line-height: 16 / 12 * 100%;
         }
     }
-}
 
-// start reviews slider
-.slick-slide {
-    margin-right: 20px;
-    padding-left: 10px;
+    .slick-dots button {
+        margin: 86px 12px;
+    }
 }
-
-.slick-dots {
-    list-style: none;
-    text-align: center;
-}
-
-.reviews__items .slick-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slick-dots button {
-    margin: 86px 12px;
-    line-height: 12;
-    font-size: 0;
-    width: 8px;
-    height: 8px;
-    background-color: $grey;
-    border: none;
-    border-radius: 50%;
-    padding: 0px;
-    cursor: pointer;
-}
-
-.slick-active button {
-    background-color: $deep-orange;
-}
-
-// end reviews slider
 
 // end reviews section
 
@@ -1745,7 +1706,7 @@
 
         @media (min-width: 900px) {
             transition: all .3s ease-in-out;
-    
+
             &:hover {
                 background: $dark-orange;
             }

@@ -81,3 +81,43 @@ body {
         color: $light-orange;
     }
 }
+
+// Slick slider 
+
+.slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .slick-slide {
+        margin-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.slick-dots {
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots button {
+    line-height: 12;
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background-color: $grey;
+    border: none;
+    border-radius: 50%;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.slick-active button {
+    background-color: $deep-orange;
+}
