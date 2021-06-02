@@ -1550,6 +1550,7 @@
 // start contacts section
 .contacts {
     padding-bottom: 160px;
+    overflow: hidden;
 
     @media (max-width: 767px) {
         padding-bottom: 50px;
